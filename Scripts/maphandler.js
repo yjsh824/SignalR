@@ -43,6 +43,7 @@ function addPoint(connectid, x, y) {
     var clr = layersColors[layersColors.indexOf(connectid) + 1];
     var symbol = new esri.symbol.SimpleMarkerSymbol();
     symbol.setColor(new esri.Color(clr));
+    symbol.color.a = 0.5;
     var layer = map.getLayer(connectid);
     var p = new esri.geometry.Point(x, y, map.spatialReference);
     layer.add(new esri.Graphic(p, symbol));
@@ -57,6 +58,7 @@ function addPolyline(connectid, paths) {
     var symbol = new esri.symbol.SimpleLineSymbol();
     var clr = layersColors[layersColors.indexOf(connectid) + 1];
     symbol.setColor(new esri.Color(clr));
+    symbol.color.a = 0.5;
     gLayer.add(new esri.Graphic(line, symbol));
 }
 /**
@@ -69,6 +71,7 @@ function addPolygon(connectid, paths) {
     var symbol = new esri.symbol.SimpleFillSymbol();
     var clr = layersColors[layersColors.indexOf(connectid) + 1];
     symbol.setColor(new esri.Color(clr));
+    symbol.color.a = 0.5;
     gLayer.add(new esri.Graphic(line, symbol));
 }
 
@@ -82,6 +85,7 @@ function addExtent(connectid, json) {
     var symbol = new esri.symbol.SimpleFillSymbol();
     var clr = layersColors[layersColors.indexOf(connectid) + 1];
     symbol.setColor(new esri.Color(clr));
+    symbol.color.a = 0.5;
     gLayer.add(new esri.Graphic(line, symbol));
 }
 /**

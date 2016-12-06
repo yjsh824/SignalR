@@ -109,7 +109,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <div id="messagediv" style="font-size: 10px">
+                                <div id="messagediv" style="font-size: 12px">
                                 </div>
                             </td>
                         </tr>
